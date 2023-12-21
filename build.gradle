@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        mavenCentral()
         google()
         mavenCentral()
     }
@@ -9,18 +8,19 @@ buildscript {
     }
 }
 
+plugins {
+    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
+}
+
 allprojects {
     repositories {
-        mavenCentral()
         google()
         mavenCentral()
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
-
-apply plugin: 'io.github.gradle-nexus.publish-plugin'
 
 apply from: "${rootDir}/scripts/publish-root.gradle"
