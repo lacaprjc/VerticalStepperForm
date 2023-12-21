@@ -174,7 +174,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="12dp">
 
-            <android.support.v7.widget.AppCompatButton
+            <Button
                 android:id="@+id/next_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
